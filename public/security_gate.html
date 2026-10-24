@@ -1,6 +1,59 @@
-<!-- Dr. Amr Torky Platform — Upfront Legal Security Gate -->
-<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Security Gate</title></head>
-<body style="background:#0a0d16; color:white; font-family:sans-serif; text-align:center; padding-top:100px;">
-<h2>🔥 MANDATORY WARNING: PROPRIETARY USAGE BOUNDARY ENFORCEMENT</h2>
-<p>Execution of these proprietary physical laws outside this sandboxed web architecture is strictly prohibited.</p>
-</body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Amr Torky Platform — Intellectual Property Security Gate</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background-color: #0a0d16; color: #f0f4f8; font-family: sans-serif; overflow: hidden; height: 100vh; display: flex; justify-content: center; align-items: center; }
+        #security-modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(6, 9, 15, 0.98); backdrop-filter: blur(12px); display: flex; justify-content: center; align-items: center; z-index: 999999; }
+        .modal-box { background: linear-gradient(135deg, #111625 0%, #0d111e 100%); border: 1px solid #1f293d; border-radius: 12px; width: 90%; max-width: 720px; padding: 40px; box-shadow: 0 20px 40px rgba(0,0,0,0.5); text-align: center; }
+        .warning-header { color: #ff3366; font-size: 1.4rem; font-weight: 700; letter-spacing: 0.05em; margin-bottom: 24px; text-transform: uppercase; border-bottom: 1px solid #2a364f; padding-bottom: 16px; }
+        .legal-text-container { text-align: left; background-color: #06090f; border: 1px solid #1a2238; padding: 24px; border-radius: 6px; font-size: 0.95rem; line-height: 1.6; max-height: 280px; overflow-y: auto; margin-bottom: 32px; color: #a0aec0; }
+        .accent-bullet { margin-left: 16px; padding-left: 8px; border-left: 2px solid #3182ce; margin-bottom: 12px; }
+        .btn-group { display: flex; gap: 20px; justify-content: center; }
+        .btn { padding: 14px 28px; font-size: 0.95rem; font-weight: 600; border-radius: 6px; cursor: pointer; transition: all 0.2s ease; text-transform: uppercase; border: none; }
+        .btn-accept { background-color: #3182ce; color: white; }
+        .btn-accept:hover { background-color: #2b6cb0; box-shadow: 0 0 12px rgba(49, 130, 206, 0.4); }
+        .btn-exit { background-color: transparent; color: #718096; border: 1px solid #4a5568; }
+        .btn-exit:hover { background-color: rgba(255,51,102,0.1); color: #ff3366; border-color: #ff3366; }
+    </style>
+</head>
+<body>
+<div id="security-modal-overlay">
+    <div class="modal-box">
+        <div class="warning-header">🔥 MANDATORY WARNING: PROPRIETARY USAGE BOUNDARY IMMUTABILITY LOCK</div>
+        <div class="legal-text-container">
+            <p>All analytical tools, regularized laws of physics, equations, numerical coefficients, source code engines, and frameworks hosted on this platform are the <strong>absolute intellectual property of Dr. Amr Torky</strong>.</p>
+            <br>
+            <p><strong>⚠️ STRICT LEGAL BOUNDARY ENFORCEMENT:</strong></p>
+            <div class="accent-bullet">
+                Any extraction, compilation, or execution of these proprietary physical laws <strong>OUTSIDE</strong> the sandboxed cloud architecture of this specific website is strictly prohibited.
+            </div>
+            <div class="accent-bullet">
+                Users are legally authorized to test, execute, and explore these invariants <strong>ONLY</strong> inside our hosted interactive reproducibility workspaces.
+            </div>
+            <br>
+            <p>Violation, external reproduction, or unauthorized commercial deployment will trigger immediate international copyright prosecution.</p>
+        </div>
+        <div class="btn-group">
+            <button class="btn btn-accept" onclick="grantAccess()">[ I Accept These Terms ]</button>
+            <button class="btn btn-exit" onclick="rejectAccess()">[ Exit ]</button>
+        </div>
+    </div>
+</div>
+<script>
+    if (localStorage.getItem('torky_gate_signed_token') === 'immutable_lock_active') {
+        document.getElementById('security-modal-overlay').style.display = 'none';
+    }
+    function grantAccess() {
+        localStorage.setItem('torky_gate_signed_token', 'immutable_lock_active');
+        document.getElementById('security-modal-overlay').style.display = 'none';
+    }
+    function rejectAccess() {
+        window.location.href = "https://github.com/AmrTorky";
+    }
+</script>
+</body>
+</html>
