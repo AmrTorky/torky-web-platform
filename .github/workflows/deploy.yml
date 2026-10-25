@@ -1,0 +1,47 @@
+name: Deploy Amr Torky Institute Platform to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build-and-deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Source Workspace
+        uses: actions/checkout@v4
+
+      - name: Setup Static Web Pages Environment
+        uses: actions/configure-pages@v4
+
+      - name: Validate Local Repository Structure
+        run: |
+          echo "[Watchdog] Auditing decoupled workspace structures..."
+          if [ -d "torky-engine-appliance" ]; then
+            echo "❌ [Security Violation] Forbidden legacy directory tree detected! Halting build."
+            exit 1
+          fi
+          echo "✓ [Security Seal] Core boundaries clean. Proceeding with Jamstack compilation."
+
+      - name: Upload Container Build Artifacts
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+
+      - name: Stream Asset Deployment to GitHub Pages Hosting
+        id: deployment
+        uses: actions/deploy-pages@v4
