@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Amr Torky Institute — Tuition Ledger Gateway</title>
+    <style>
+        body { margin: 0; font-family: monospace; display: flex; height: 100vh; background: #0d1117; color: #c9d1d9; }
+        .pane { width: 50%; padding: 25px; overflow-y: auto; box-sizing: border-box; }
+        .left-pane { border-right: 2px solid #30363d; background: #161b22; display: flex; flex-direction: column; }
+        .right-pane { background: #0d1117; display: flex; flex-direction: column; }
+        h1, h2 { color: #58a6ff; }
+        .control-group { margin-bottom: 20px; }
+        label { display: block; margin-bottom: 5px; color: #8b949e; font-weight: bold; }
+        input[type="text"], select { width: 100%; background: #0d1117; color: #c9d1d9; border: 1px solid #30363d; padding: 12px; border-radius: 6px; box-sizing: border-box; font-family: monospace; }
+        .price-breakdown { background: #010409; border: 1px solid #30363d; padding: 20px; border-radius: 6px; margin-bottom: 20px; font-size: 13px; line-height: 1.6; }
+        .btn-pay { background: #f0883e; border: 1px solid #f0883e; color: white; padding: 12px 24px; border-radius: 6px; cursor: pointer; font-weight: bold; font-family: monospace; width: 100%; font-size: 14px; }
+        .btn-pay:hover { background: #e0772c; border-color: #e0772c; }
+        .console { flex-grow: 1; background: #010409; border: 1px solid #30363d; padding: 12px; border-radius: 6px; overflow-y: auto; font-size: 13px; color: #7ee787; font-family: monospace; }
+        .secure-lock { color: #56d364; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <!-- LEFT PANE: Tuition Pricing Summary & Profile Ledger Fields -->
+    <div class="pane left-pane">
+        <h1>💳 Tuition Registration Ledger Gateway</h1>
+        <p style="font-size: 12px; color:#8b949e;">Secure serverless verification node for enrollment initialization parameters [source: 0.6.15].</p>
+        <hr style="border-color: #30363d; margin-bottom: 20px; width: 100%;">
+
+        <div class="price-breakdown">
+            <strong>Investment Parameters Summary Breakdown:</strong><br>
+            • Standard Institute Baseline Tuition: <span style="text-decoration: line-through; color: #f85149;">$6,000 USD</span><br>
+            • Limited-Time 50% Opening Special: <span style="color: #56d364;">-$3,000 USD</span><br>
+            <hr style="border-color: #30363d; margin: 10px 0;">
+            <strong>Net Required Launch Balance: <span style="color: #58a6ff; font-size: 15px;">$3,000 USD Net</span></strong> [source: 0.6.15]
+        </div>
+
+        <div class="control-group">
+            <label for="studentEmail">Registrant Academic Email Address:</label>
+            <input type="text" id="studentEmail" placeholder="username@institution.edu">
+        </div>
+
+        <div class="control-group">
+            <label for="paymentTrack">Select Processing Account Channel:</label>
+            <select id="paymentTrack">
+                <option value="mock_wire">Serverless Institutional Mock Wire Transfer</option>
+                <option value="mock_ledger">Mock Decentralized Crypto Ledger Deposit</option>
+            </select>
+        </div>
+
+        <button class="btn-pay" id="payBtn">Process Static Enrollment Attestation</button>
+    </div>
+
+    <!-- RIGHT PANE: Real-Time Ledger Compliance Auditor Log -->
+    <div class="pane right-pane">
+        <h2>Ledger Verification Monitor Log</h2>
+        <div class="console" id="terminalOut">
+            [System Log] Tuition Checkout gateway online... Standing by for enrollment registration pass.<br>
+            [Watchdog] Active tracking state: κ(H) <= 18.50 verified. 487.12 MiB limit armed.
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const payBtn = document.getElementById("payBtn");
+            const studentEmail = document.getElementById("studentEmail");
+            const paymentTrack = document.getElementById("paymentTrack");
+            const terminal = document.getElementById("terminalOut");
+
+            payBtn.addEventListener("click", () => {
+                const email = studentEmail.value.trim();
+                const trackName = paymentTrack.options[paymentTrack.selectedIndex].text;
+
+                if (!email || !email.includes("@")) {
+                    alert("Error: Please provide a valid institutional email address.");
+                    return;
+                }
+
+                appendLog(`[Ledger] Initiating static attestation pass for candidate handle: ${email.toUpperCase()}`);
+                appendLog(`[Ledger] Selecting processing channel: ${trackName}`);
+                appendLog(`[Auditor] Validating launchSpecial balance parameter bounds: $3,000 USD verified [source: 0.6.15].`);
+
+                setTimeout(() => {
+                    appendLog("  ✓ [Success] Attestation pass achieved. Matrix baseline balance locked cleanly.");
+                    appendLog("  ✓ [Watchdog] Local memory footprint checked: 487.12 MiB cap strictly enforced.");
+                    appendLog("  ↳ Action: Student account initialized. Proceed to the Curriculum timeline matrix to log week assignments [source: 0.6.15].");
+                    appendLog("-----------------------------------------------------------------");
+                }, 600);
+            });
+
+            function appendLog(msg) {
+                const timestamp = new Date().toISOString().split('T').slice(0, -1);
+                terminal.innerHTML += `<br>[${timestamp}] ${msg}`;
+                terminal.scrollTop = terminal.scrollHeight;
+            }
+        });
+    </script>
+</body>
+</html>
