@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Amr Torky Institute — 6-Month Certification Matrix</title>
+    <style>
+        body { margin: 0; font-family: monospace; display: flex; flex-direction: column; height: 100vh; background: #0d1117; color: #c9d1d9; }
+        header { background: #161b22; border-bottom: 2px solid #30363d; padding: 20px; display: flex; justify-content: space-between; align-items: center; }
+        .inst-title { color: #58a6ff; margin: 0; font-size: 22px; font-weight: bold; }
+        .tuition-badge { background: rgba(240, 136, 62, 0.15); border: 1px solid #f0883e; color: #f0883e; padding: 6px 12px; border-radius: 6px; font-weight: bold; font-size: 13px; }
+        .main-container { display: flex; flex-grow: 1; overflow: hidden; }
+        .pane { width: 50%; padding: 25px; overflow-y: auto; box-sizing: border-box; display: flex; flex-direction: column; }
+        .left-pane { border-right: 2px solid #30363d; background: #161b22; }
+        .right-pane { background: #0d1117; }
+        h2 { color: #58a6ff; border-bottom: 1px solid #30363d; padding-bottom: 8px; font-size: 16px; margin-top: 0; }
+        .timeline-node { background: #0d1117; border: 1px solid #30363d; padding: 15px; border-radius: 6px; margin-bottom: 15px; cursor: pointer; transition: all 0.2s ease; border-left: 4px solid #30363d; }
+        .timeline-node:hover { border-color: #58a6ff; background: #21262d; }
+        .node-active { border-left-color: #58a6ff; background: #21262d; box-shadow: 0 0 15px rgba(88, 166, 255, 0.1); }
+        .details-box { background: #010409; border: 1px solid #30363d; padding: 20px; border-radius: 6px; line-height: 1.6; font-size: 13px; color: #8b949e; flex-grow: 1; overflow-y: auto; }
+        .highlight { color: #58a6ff; font-weight: bold; }
+        .success-seal { color: #56d364; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="inst-title">🎓 The Amr Torky Institute of Mathematical Physics & Infrastructure</div>
+        <div class="tuition-badge">🏷️ Launch Special: $3,000 USD Net (50% Off $6,000 Baseline)</div>
+    </header>
+
+    <div class="main-container">
+        <div class="pane left-pane">
+            <h2>Immutable Curriculum Timeline Track</h2>
+            
+            <div class="timeline-node node-active" id="block1" data-index="1">
+                <strong>Weeks 01–06: Non-Singular Linear Algebra & Real Numeric Truth</strong>
+                <div style="font-size: 11px; color:#8b949e; margin-top: 5px;">Eliminating the illusions of spatial infinity and zero-division errors.</div>
+            </div>
+
+            <div class="timeline-node" id="block2" data-index="2">
+                <strong>Weeks 07–12: Bare-Metal Control Plane & Live Seal Engineering</strong>
+                <div style="font-size: 11px; color:#8b949e; margin-top: 5px;">Low-level QPU/Photonic execution anchors and 20ms hardware interlocks.</div>
+            </div>
+
+            <div class="timeline-node" id="block3" data-index="3">
+                <strong>Weeks 13–18: The New Era of Programming & Mathematical Matrix Layouts</strong>
+                <div style="font-size: 11px; color:#8b949e; margin-top: 5px;">Why coding syntax is obsolete and physical laws rule the system stack.</div>
+            </div>
+
+            <div class="timeline-node" id="block4" data-index="4">
+                <strong>Weeks 19–24: Enterprise AI Infrastructure & Sovereign Technical Governance</strong>
+                <div style="font-size: 11px; color:#8b949e; margin-top: 5px;">Deploying the 6-stage evidence lifecycle containers directly into runtime kernels.</div>
+            </div>
+        </div>
+
+        <div class="pane right-pane">
+            <h2>Detailed Target Specialization Parameters</h2>
+            <div class="details-box" id="detailsDisplay">
+                <!-- Content gets injected dynamically via curriculum_viewer.js -->
+            </div>
+        </div>
+    </div>
+
+    <script src="curriculum_viewer.js"></script>
+</body>
+</html>
