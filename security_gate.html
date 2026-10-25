@@ -5,34 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scientist Amr Torky Platform — Legal Security Gate</title>
     <style>
-        body { margin: 0; font-family: monospace; background: #050508; color: #58a6ff; display: flex; justify-content: center; align-items: center; height: 100vh; padding: 20px; box-sizing: border-box; }
-        .modal { background: #161b22; border: 2px solid #58a6ff; box-shadow: 0 0 20px rgba(88, 166, 255, 0.2); padding: 30px; max-width: 700px; border-radius: 8px; text-align: left; }
-        h2 { color: #ff7b72; margin-top: 0; font-size: 18px; border-bottom: 1px solid #30363d; padding-bottom: 10px; }
-        p { color: #8b949e; font-size: 13px; line-height: 1.6; }
-        .warning-box { background: rgba(24ff, 123, 114, 0.1); border-left: 4px solid #ff7b72; padding: 12px; margin: 15px 0; font-size: 12px; color: #ff7b72; }
+        body { margin: 0; font-family: 'Courier New', monospace; background: #0a0a0c; color: #00ffcc; }
+        .overlay { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(5, 5, 8, 0.96); z-index: 99999; display: flex; justify-content: center; align-items: center; }
+        .modal { background: #111118; border: 2px solid #00ffcc; box-shadow: 0 0 30px rgba(0, 255, 204, 0.3); padding: 30px; max-width: 750px; width: 90%; border-radius: 8px; text-align: left; }
+        .modal h2 { color: #ff3366; margin-top: 0; border-bottom: 1px solid #ff3366; padding-bottom: 10px; font-size: 18px; }
+        .modal p { color: #d0d0d8; font-size: 13px; line-height: 1.6; }
+        .warning-box { background: rgba(255, 51, 102, 0.1); border-left: 4px solid #ff3366; padding: 12px; margin: 15px 0; font-size: 12px; color: #ff99aa; }
         .btn-container { margin-top: 25px; display: flex; gap: 15px; }
-        button { background: #21262d; border: 1px solid #30363d; color: #c9d1d9; padding: 10px 20px; border-radius: 6px; font-family: monospace; font-weight: bold; cursor: pointer; }
-        button.accept { background: #238636; color: #fff; border: 1px solid #2ea44f; }
-        button:hover { background: #30363d; }
+        .btn-accept { background: #00ffcc; color: #050508; border: none; padding: 12px 24px; font-weight: bold; cursor: pointer; border-radius: 4px; font-family: inherit; }
+        .btn-accept:hover { background: #00cca3; box-shadow: 0 0 15px #00ffcc; }
+        .btn-exit { background: transparent; color: #ff3366; border: 1px solid #ff3366; padding: 12px 24px; cursor: pointer; border-radius: 4px; font-family: inherit; }
     </style>
 </head>
 <body>
-    <div class="modal">
-        <h2>🔒 MANDATORY USAGE BOUNDARY & SYSTEM STATE IMMUTABILITY LOCK</h2>
-        <p>All analytical tools, non-singular equations, regularized physical models, and 9-byte vector solvers hosted on this platform are the exclusive intellectual property of <strong>Scientist Amr Torky</strong>.</p>
-        <div class="warning-box">
-            <strong>⚠️ RESTRICTED USAGE BOUNDARY ENFORCEMENT:</strong><br>
-            External commercial exploitation outside this sandboxed infrastructure is strictly prohibited. Users receive authorization to execute verification tests via authorized student terminal clones, which asynchronously log signed execution telemetry back to the central repository registry via REST webhooks.
-        </div>
-        <p>Tuition Model: Standard Full Tuition $12,000 USD | Limited-Time Launch Offer: $6,000 USD Net.</p>
-        <div class="btn-container">
-            <button class="accept" onclick="acceptGate()">[ I ACCEPT THE INVARIANT TERMS ]</button>
-            <button onclick="window.location.href='https://github.com'">[ EXIT ]</button>
+    <div class="overlay" id="securityGate">
+        <div class="modal">
+            <h2>🔥 MANDATORY WARNING: PROPRIETARY USAGE & SYSTEM STATE IMMUTABILITY LOCK</h2>
+            <p>All analytical tools, laws of physics, equations, numerical coefficients, source code engines, and validation frameworks hosted on this platform are the absolute intellectual property of <strong>Scientist Amr Torky</strong>.</p>
+            <div class="warning-box">
+                <strong>⚠️ STRICT LEGAL BOUNDARY ENFORCEMENT:</strong><br>
+                Any extraction, compilation, or execution of these proprietary physical laws OUTSIDE the sandboxed cloud architecture of this specific website is strictly prohibited. Users are legally authorized to test, execute, and explore these invariants ONLY inside our hosted interactive workspaces.
+            </div>
+            <p>Violation, external reproduction, or unauthorized commercial deployment will trigger immediate international copyright prosecution and legal lawsuits for unauthorized IP exploitation.</p>
+            <div class="btn-container">
+                <button class="btn-accept" onclick="acceptTerms()">[ I ACCEPT AND UNDERSTAND THESE TERMS ]</button>
+                <button class="btn-exit" onclick="exitPlatform()">[ EXIT PLATFORM ]</button>
+            </div>
         </div>
     </div>
     <script>
-        function acceptGate() {
-            window.location.href = 'index.html';
+        function acceptTerms() {
+            document.getElementById('securityGate').style.display = 'none';
+            sessionStorage.setItem('torky_terms_accepted', 'true');
+        }
+        function exitPlatform() {
+            window.location.href = "https://github.com";
         }
     </script>
 </body>
