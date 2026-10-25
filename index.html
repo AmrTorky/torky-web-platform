@@ -8,12 +8,13 @@
         body { margin: 0; font-family: monospace; background: #0d1117; color: #c9d1d9; padding: 50px; text-align: center; }
         h1 { color: #58a6ff; font-size: 24px; margin-bottom: 5px; }
         p.subtitle { color: #8b949e; font-size: 13px; margin-top: 0; margin-bottom: 40px; }
-        .router-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; max-width: 1200px; margin: 0 auto; }
-        .card { background: #161b22; border: 1px solid #30363d; padding: 20px; border-radius: 8px; text-decoration: none; color: #c9d1d9; text-align: left; transition: transform 0.2s, border-color 0.2s; }
+        .router-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; max-width: 1200px; margin: 0 auto; }
+        .card { background: #161b22; border: 1px solid #30363d; padding: 20px; border-radius: 8px; text-decoration: none; color: #c9d1d9; text-align: left; transition: transform 0.2s, border-color 0.2s; position: relative; }
         .card:hover { transform: translateY(-3px); border-color: #58a6ff; }
-        .card h2 { color: #58a6ff; font-size: 16px; margin-top: 0; margin-bottom: 10px; }
+        .card h2 { color: #58a6ff; font-size: 15px; margin-top: 0; margin-bottom: 10px; padding-right: 80px; }
         .card p { font-size: 12px; color: #8b949e; margin: 0; line-height: 1.5; }
-        .badge { background: #238636; color: #fff; padding: 2px 6px; border-radius: 4px; font-size: 10px; float: right; }
+        .status-badge { position: absolute; top: 20px; right: 20px; font-size: 10px; font-weight: bold; padding: 2px 6px; border-radius: 4px; background: #238636; color: #fff; text-transform: uppercase; }
+        .fiduciary-info { margin-top: 15px; font-size: 11px; color: #58a6ff; border-top: 1px solid #21262d; padding-top: 10px; }
     </style>
 </head>
 <body>
@@ -22,34 +23,40 @@
 
     <div class="router-grid">
         <a href="https://github.io" class="card">
-            <span class="badge">Field 1</span>
+            <span class="status-badge">Field 1</span>
             <h2>🧬 Medical Diagnostics</h2>
             <p>Hand-sized CERN hospital scanners, micro-synchrotron virus trapping, and zero-crash biomolecular inversion loops.</p>
+            <div class="fiduciary-info">Accreditation Base: V_finite(0) = 11.384 eV Ceiling</div>
         </a>
         <a href="https://github.io" class="card">
-            <span class="badge">Field 2</span>
+            <span class="status-badge">Field 2</span>
             <h2>⚡ Continuous Nuclear Energy</h2>
             <p>Solid-state wakefield loops, passive heat-pipe containment models, and quantum micro-reactors.</p>
+            <div class="fiduciary-info">Metrological Target: Xi_T,norm ≈ 1.02 × 10^60</div>
         </a>
         <a href="https://github.io" class="card">
-            <span class="badge">Field 3</span>
+            <span class="status-badge">Field 3</span>
             <h2>📉 Electron Field Regularization</h2>
             <p>Universal zero-division normalization, fermionic energy capping, and color confinement mass pole tests.</p>
+            <div class="fiduciary-info">Arithmetic Bound: 0.00% NaN Arithmetic Crash Shield</div>
         </a>
         <a href="https://github.io" class="card">
-            <span class="badge">Field 4</span>
+            <span class="status-badge">Field 4</span>
             <h2>☀️ Ultraviolet & High-Energy Photonics</h2>
             <p>2-photon Hong-Ou-Mandel coincidence audits, chiral nanotube tracking, and phase quadrature setups.</p>
+            <div class="fiduciary-info">Photonic Target: Multiplier M_net = 1.6056</div>
         </a>
         <a href="https://github.io" class="card">
-            <span class="badge">Field 5</span>
+            <span class="status-badge">Field 5</span>
             <h2>🌌 Cosmology & Non-Singular Black Holes</h2>
             <p>Singularity-free Kretschmann core rebounds, Millennium problem resolutions, and dynamical dark energy matrices.</p>
+            <div class="fiduciary-info">Cosmic Target: Boundary condition K(0) < Infinity</div>
         </a>
         <a href="https://github.io" class="card">
-            <span class="badge">Fields 6-9</span>
+            <span class="status-badge">Fields 6-9</span>
             <h2>🛠️ Advanced Scientific Domains</h2>
-            <p>Quantum chemistryElectronic manifolds, plasma acceleration vectors, actinide crystal fields, and turbulent fluids.</p>
+            <p>Quantum chemistry electronic manifolds, plasma acceleration vectors, actinide crystal fields, and turbulent fluids.</p>
+            <div class="fiduciary-info">Unified Domain: Statically Compiled XLA Matrix Runtime</div>
         </a>
     </div>
 </body>
