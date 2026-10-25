@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sovereign Invariant Compliance Authorization Node</title>
+    <style>
+        body { margin: 0; background: #010409; color: #c9d1d9; font-family: monospace; display: flex; justify-content: center; align-items: center; height: 100vh; overflow: hidden; }
+        .blur-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(13, 17, 23, 0.85); backdrop-filter: blur(20px); z-index: 9998; }
+        .modal-container { position: fixed; width: 90%; max-width: 720px; background: #161b22; border: 2px solid #f85149; border-radius: 8px; padding: 30px; box-sizing: border-box; z-index: 9999; box-shadow: 0 0 50px rgba(248, 81, 73, 0.25); }
+        .header-alert { color: #f85149; font-size: 18px; font-weight: bold; margin-bottom: 20px; border-bottom: 1px solid #30363d; padding-bottom: 10px; display: flex; align-items: center; gap: 10px; }
+        .legal-body { font-size: 13px; line-height: 1.6; color: #8b949e; background: #0d1117; padding: 20px; border: 1px solid #30363d; border-radius: 6px; max-height: 280px; overflow-y: auto; white-space: pre-wrap; font-family: 'Courier New', monospace; }
+        .highlight-term { color: #58a6ff; font-weight: bold; }
+        .warning-term { color: #f0883e; font-weight: bold; }
+        .btn-group { display: flex; justify-content: flex-end; gap: 15px; margin-top: 25px; }
+        button { font-family: monospace; font-size: 13px; font-weight: bold; padding: 10px 20px; border-radius: 6px; cursor: pointer; transition: background 0.2s; }
+        .btn-accept { background: #238636; border: 1px solid #2ea44f; color: #ffffff; }
+        .btn-accept:hover { background: #2ea44f; }
+        .btn-exit { background: #21262d; border: 1px solid #30363d; color: #f85149; }
+        .btn-exit:hover { background: #30363d; }
+    </style>
+</head>
+<body>
+
+    <div class="blur-overlay" id="gateOverlay"></div>
+
+    <div class="modal-container" id="gateModal">
+        <div class="header-alert">
+            🔥 MANDATORY WARNING: PROPRIETARY USAGE & SYSTEM STATE IMMUTABILITY LOCK
+        </div>
+        <div class="legal-body">
+All analytical tools, laws of physics, equations, numerical coefficients, source code engines, and validation frameworks hosted on this platform are the absolute intellectual property of <span class="highlight-term">Dr. Amr Torky</span> under the strict protective terms of the Torky Continuum Enterprise Evaluation & Proprietary License.<span class="warning-term">
+
+⚠️ STRICT LEGAL BOUNDARY ENFORCEMENT:</span>
+Any extraction, compilation, reverse-engineering, or execution of these proprietary physical laws <span class="warning-term">OUTSIDE</span> the sandboxed cloud workspaces of this specific website is strictly prohibited. Users are legally authorized to test, execute, and explore these analytical invariants <span class="highlight-term">ONLY</span> inside our hosted interactive environments.
+
+Violation, external reproduction, or unauthorized commercial deployment will trigger immediate international copyright prosecution, systemic tracking audits, and legal lawsuits for unauthorized IP exploitation.
+
+By clicking <span class="highlight-term">[ I ACCEPT AND UNDERSTAND THESE TERMS ]</span> below, you establish a binding metrological attestation to remain strictly within the browser-enforced runtime sandbox bounds.
+        </div>
+        <div class="btn-group">
+            <button class="btn-exit" id="exitBtn">EXIT PLATFORM</button>
+            <button class="btn-accept" id="acceptBtn">I ACCEPT AND UNDERSTAND THESE TERMS</button>
+        </div>
+    </div>
+
+    <script src="license_gate.js"></script>
+</body>
+</html>
