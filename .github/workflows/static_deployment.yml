@@ -1,0 +1,38 @@
+name: "Ecosystem Static Integration & Edge Proxy Deployment Pipeline"
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  deploy-infrastructure:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Active Repository Stream Vectors
+        uses: actions/checkout@v4
+
+      - name: Setup Global Network Static Edge Infrastructure
+        uses: actions/configure-pages@v4
+
+      - name: Compile and Bundle Workspace Invariant Assets
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+
+      - name: Propagate Manifest Blocks Across Edge Proxies
+        id: deployment
+        uses: actions/deploy-pages@v4
