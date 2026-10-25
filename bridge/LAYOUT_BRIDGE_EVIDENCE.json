@@ -3,8 +3,8 @@
   "system_submodule": "REALTIME_LAYOUT_VISUAL_BRIDGE",
   "layout_coordinate_nodes_streamed": 512,
   "iterations_executed": 50000,
-  "mean_latency_us": 6.281,
-  "p99_tail_latency_us": 24.802,
-  "execution_jitter_us": 18.521,
+  "mean_latency_us": 6.4837,
+  "p99_tail_latency_us": 25.601,
+  "execution_jitter_us": 19.1173,
   "peak_ram_allocation_mib": 487.12
 }
