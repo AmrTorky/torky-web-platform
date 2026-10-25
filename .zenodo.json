@@ -1,0 +1,20 @@
+{
+  "title": "Invariant Specialized Infrastructure Matrix: A Serverless Open-Science Micro-Frontend Platform Architecture",
+  "creators": [
+    {
+      "name": "Torky, Amr",
+      "affiliation": "Amr Torky Institute for Advanced Physical Engineering"
+    }
+  ],
+  "description": "A comprehensive 9-repository statically compiled sandbox platform implementing spatial regularizers, autonomous Hessian conditioning clamping, and non-singular algebraic field solvers compliant with ISO/IEC 17025 metrological standards.",
+  "access_right": "open",
+  "license": "MIT",
+  "keywords": [
+    "Open-Science",
+    "Micro-Frontend",
+    "Metrological Calibration",
+    "Invariant Systems",
+    "Hessian Regularization"
+  ],
+  "version": "1.0.0-omega"
+}
