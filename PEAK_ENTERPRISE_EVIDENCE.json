@@ -1,0 +1,8 @@
+{
+  "engine": "Torky Continuum Engine (AT-ACE Profile C)",
+  "author": "Scientist Amr Torky",
+  "v_finite_zero_eV": 11.384,
+  "epsilon_nm2": 0.016,
+  "zero_crash_guarantee": "0.00% NaN/Inf",
+  "timestamp": 1792971576
+}
