@@ -2,33 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Torky Engine Continuum Interface Platform</title>
+    <title>Amr Torky Open-Science Platform Engine</title>
     <style>
-        body { margin: 0; font-family: monospace; background: #0d1117; color: #c9d1d9; }
-        .app-container { padding: 40px; }
+        body { margin: 0; font-family: monospace; background: #0d1117; color: #c9d1d9; padding: 50px; text-align: center; }
         h1 { color: #58a6ff; }
-        a { color: #58a6ff; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        li { margin-bottom: 10px; }
+        .router-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 40px; }
+        .card { background: #161b22; border: 1px solid #30363d; padding: 20px; border-radius: 8px; text-decoration: none; color: #c9d1d9; transition: transform 0.2s; }
+        .card:hover { transform: translateY(-5px); border-color: #8b949e; }
+        .card h2 { color: #58a6ff; margin-top: 0; }
     </style>
-    <script>
-        // Check structural compliance contract immediately on document head load
-        if (localStorage.getItem("TORKY_SOVEREIGN_LICENSE_SIGNATURE") !== "VERIFIED_COMPLIANCE_SIGNATURE_SEALED") {
-            window.location.href = "legal/license.html";
-        }
-    </script>
 </head>
 <body>
-    <div class="app-container">
-        <h1>Torky Engine Continuum Master Navigation Framework</h1>
-        <p>Zero-Server Interactive Pipeline Driven by WebAssembly & WebGPU Runtimes</p>
-        <hr style="border-color: #30363d; margin: 20px 0;">
-        <ul>
-            <li><a href="laboratory/field1_medical.html">🧬 Field 1: Medical Diagnostics</a></li>
-            <li><a href="laboratory/field2_energy.html">⚡ Field 2: Nuclear Energy</a></li>
-            <li><a href="competition_portal.html">🏆 Coding Competition Arena</a></li>
-            <li><a href="institute_portal.html">🎓 Certification Attestation Hub</a></li>
-        </ul>
+    <h1>Amr Torky Open-Science & Sandbox Platform</h1>
+    <p>Serverless Interactive Jamstack Router • Driven by Invariant Code Architectures</p>
+
+    <div class="router-grid">
+        <a href="laboratory/field1_medical.html" class="card">
+            <h2>🧬 Domain Field 1</h2>
+            <p>Medical Diagnostics: Micro-synchrotron virus trapping scans and zero-crash VQE drug validation.</p>
+        </a>
+        <a href="laboratory/competition_portal.html" class="card">
+            <h2>🏆 Competition Portal</h2>
+            <p>Algorithmic Playground: Real-time matrix testing from ICPC, QHack, and Kaggle benchmarks.</p>
+        </a>
+        <a href="laboratory/institute_portal.html" class="card">
+            <h2>🎓 Institute Hub</h2>
+            <p>Accreditation Model: 6-month roadmap tracking, tuition specials, and SHA-256 certificate anchors.</p>
+        </a>
     </div>
 </body>
 </html>
