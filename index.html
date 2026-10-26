@@ -5,58 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scientist Amr Torky Open-Science & Sandbox Platform</title>
     <style>
-        body { margin: 0; font-family: monospace; background: #0d1117; color: #c9d1d9; padding: 50px; text-align: center; }
-        h1 { color: #58a6ff; font-size: 24px; margin-bottom: 5px; }
-        p.subtitle { color: #8b949e; font-size: 13px; margin-top: 0; margin-bottom: 40px; }
-        .router-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; max-width: 1200px; margin: 0 auto; }
-        .card { background: #161b22; border: 1px solid #30363d; padding: 20px; border-radius: 8px; text-decoration: none; color: #c9d1d9; text-align: left; transition: transform 0.2s, border-color 0.2s; position: relative; }
-        .card:hover { transform: translateY(-3px); border-color: #58a6ff; }
-        .card h2 { color: #58a6ff; font-size: 15px; margin-top: 0; margin-bottom: 10px; padding-right: 80px; }
-        .card p { font-size: 12px; color: #8b949e; margin: 0; line-height: 1.5; }
-        .status-badge { position: absolute; top: 20px; right: 20px; font-size: 10px; font-weight: bold; padding: 2px 6px; border-radius: 4px; background: #238636; color: #fff; text-transform: uppercase; }
-        .fiduciary-info { margin-top: 15px; font-size: 11px; color: #58a6ff; border-top: 1px solid #21262d; padding-top: 10px; }
+        body { margin: 0; font-family: 'Segoe UI', Tahoma, sans-serif; background: #0a0a0c; color: #e0e0e8; }
+        header { background: #12121c; padding: 25px 40px; border-bottom: 2px solid #00ffcc; text-align: center; }
+        h1 { margin: 0; font-size: 26px; color: #00ffcc; }
+        p.subtitle { margin: 5px 0 0 0; color: #8888a0; font-size: 14px; }
+        .nav-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; padding: 40px; }
+        .nav-card { background: #12121a; border: 1px solid #222233; border-radius: 8px; padding: 25px; transition: transform 0.2s, border-color 0.2s; text-decoration: none; color: inherit; display: block; }
+        .nav-card:hover { transform: translateY(-3px); border-color: #00ffcc; }
+        .nav-card h2 { color: #00ffcc; font-size: 18px; margin-top: 0; }
+        .nav-card p { font-size: 13px; color: #aaaaaa; line-height: 1.5; margin-bottom: 0; }
     </style>
 </head>
 <body>
-    <h1>Scientist Amr Torky Open-Science & Sandbox Platform</h1>
-    <p class="subtitle">Serverless 60–80 Page Router Interface • Driven by Invariant Code Architectures</p>
+    <header>
+        <h1>Scientist Amr Torky Open-Science & Sandbox Platform</h1>
+        <p class="subtitle">Serverless Interactive Jamstack Engine • WebAssembly Driven</p>
+    </header>
 
-    <div class="router-grid">
-        <a href="https://github.io" class="card">
-            <span class="status-badge">Field 1</span>
-            <h2>🧬 Medical Diagnostics</h2>
-            <p>Hand-sized CERN hospital scanners, micro-synchrotron virus trapping, and zero-crash biomolecular inversion loops.</p>
-            <div class="fiduciary-info">Accreditation Base: V_finite(0) = 11.384 eV Ceiling</div>
+    <div class="nav-grid">
+        <a href="field1_medical.html" class="nav-card">
+            <h2>🧬 Field 1: Medical Diagnostics</h2>
+            <p>Hand-sized CERN hospital scanners, micro-synchrotron virus trapping, and zero-crash VQE drug discovery.</p>
         </a>
-        <a href="https://github.io" class="card">
-            <span class="status-badge">Field 2</span>
-            <h2>⚡ Continuous Nuclear Energy</h2>
-            <p>Solid-state wakefield loops, passive heat-pipe containment models, and quantum micro-reactors.</p>
-            <div class="fiduciary-info">Metrological Target: Xi_T,norm ≈ 1.02 × 10^60</div>
+        <a href="competition_portal.html" class="nav-card">
+            <h2>🏆 Coding Competition Portal</h2>
+            <p>Gamified benchmark sandbox ingesting ICPC, QHack, and Kaggle problem datasets with dual execution tracks.</p>
         </a>
-        <a href="https://github.io" class="card">
-            <span class="status-badge">Field 3</span>
-            <h2>📉 Electron Field Regularization</h2>
-            <p>Universal zero-division normalization, fermionic energy capping, and color confinement mass pole tests.</p>
-            <div class="fiduciary-info">Arithmetic Bound: 0.00% NaN Arithmetic Crash Shield</div>
-        </a>
-        <a href="https://github.io" class="card">
-            <span class="status-badge">Field 4</span>
-            <h2>☀️ Ultraviolet & High-Energy Photonics</h2>
-            <p>2-photon Hong-Ou-Mandel coincidence audits, chiral nanotube tracking, and phase quadrature setups.</p>
-            <div class="fiduciary-info">Photonic Target: Multiplier M_net = 1.6056</div>
-        </a>
-        <a href="https://github.io" class="card">
-            <span class="status-badge">Field 5</span>
-            <h2>🌌 Cosmology & Non-Singular Black Holes</h2>
-            <p>Singularity-free Kretschmann core rebounds, Millennium problem resolutions, and dynamical dark energy matrices.</p>
-            <div class="fiduciary-info">Cosmic Target: Boundary condition K(0) < Infinity</div>
-        </a>
-        <a href="https://github.io" class="card">
-            <span class="status-badge">Fields 6-9</span>
-            <h2>🛠️ Advanced Scientific Domains</h2>
-            <p>Quantum chemistry electronic manifolds, plasma acceleration vectors, actinide crystal fields, and turbulent fluids.</p>
-            <div class="fiduciary-info">Unified Domain: Statically Compiled XLA Matrix Runtime</div>
+        <a href="institute_portal.html" class="nav-card">
+            <h2>🎓 Institute Certification</h2>
+            <p>6-Month professional curriculum ($12,000 USD / $6,000 USD Net), bare-metal control, and SHA-256 certificates.</p>
         </a>
     </div>
 </body>

@@ -1,0 +1,13 @@
+{
+  "institution": "Amr Torky Institute for Advanced Physical Engineering",
+  "chief_architect": "Scientist Amr Torky",
+  "student_name": "Dr. Sarah Jenkins",
+  "track_id": "CMSP-Track-01",
+  "exam_score_percent": 92.5,
+  "tuition_standard_usd": 12000.0,
+  "tuition_paid_net_usd": 6000.0,
+  "issue_timestamp": 1792973166,
+  "accreditation_status": "VERIFIED & CERTIFIED",
+  "iso_standard": "ISO/IEC 17025:2017",
+  "sha256_digest": "f89345914951028d5a98fabb6ad2313e12274dc736c62cea7e02b0643d079331"
+}

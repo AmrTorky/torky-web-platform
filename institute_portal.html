@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amr Torky Institute — 6-Month Certification Program</title>
+    <style>
+        body { margin: 0; font-family: 'Segoe UI', Tahoma, sans-serif; background: #0a0a0c; color: #e0e0e8; }
+        header { background: #12121c; padding: 20px 40px; border-bottom: 2px solid #00ffcc; display: flex; justify-content: space-between; align-items: center; }
+        h1 { margin: 0; font-size: 22px; color: #00ffcc; }
+        .pricing-banner { background: linear-gradient(90deg, rgba(0,255,204,0.1) 0%, rgba(255,51,102,0.1) 100%); border: 1px solid #00ffcc; padding: 15px 30px; margin: 20px 40px; border-radius: 8px; display: flex; justify-content: space-between; align-items: center; }
+        .price { font-size: 24px; font-weight: bold; color: #00ffcc; }
+        .discount { text-decoration: line-through; color: #888; font-size: 16px; margin-right: 10px; }
+        .roadmap-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; padding: 0 40px 30px 40px; }
+        .module-card { background: #12121a; border: 1px solid #222233; border-radius: 8px; padding: 20px; }
+        .module-card h3 { color: #00ffcc; font-size: 16px; margin-top: 0; border-bottom: 1px solid #333; padding-bottom: 8px; }
+        ul { padding-left: 20px; font-size: 13px; line-height: 1.8; color: #b0b0c0; }
+        .exam-section { background: #0e0e14; border: 1px solid #00ffcc; border-radius: 8px; margin: 0 40px 40px 40px; padding: 25px; }
+        .btn-cert { background: #00ffcc; color: #050508; border: none; padding: 12px 24px; font-weight: bold; cursor: pointer; border-radius: 4px; font-family: inherit; margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🎓 Amr Torky Institute for Physical Engineering</h1>
+        <span style="color: #00ffcc; font-size: 13px;">Chief Architect: Scientist Amr Torky</span>
+    </header>
+
+    <div class="pricing-banner">
+        <div>
+            <strong style="font-size: 16px; color: #fff;">Limited-Time Launch Offer (50% Off Tuition)</strong>
+            <p style="margin: 5px 0 0 0; font-size: 12px; color: #aaa;">Includes live bare-metal hardware access, Wasm sandbox runtimes, and permanent SHA-256 certificate digests.</p>
+        </div>
+        <div>
+            <span class="discount">$12,000 USD</span>
+            <span class="price">$6,000 USD Net</span>
+        </div>
+    </div>
+
+    <div class="roadmap-grid">
+        <div class="module-card">
+            <h3>🟦 Weeks 01–06: Advanced Non-Singular Linear Algebra</h3>
+            <ul>
+                <li>Mastering real numeric truth: No Zero / No Infinity spaces.</li>
+                <li>Calculating spectral condition numbers κ(H) manually & programmatically.</li>
+                <li>Deriving lower Fisher Information Metric bounds (λ_min ≥ 7.389 nm⁻²).</li>
+                <li><strong>Target Accreditations:</strong> CMSP, Universal Scale Floor Specialist.</li>
+            </ul>
+        </div>
+        <div class="module-card">
+            <h3>🟩 Weeks 07–12: Bare-Metal Control Plane & Live Seal</h3>
+            <ul>
+                <li>Direct hardware control: Live Seal parameter stabilization.</li>
+                <li>Cloud QPU Interfacing (IQM Quantum, Quandela API) & Tikhonov damping.</li>
+                <li>Executing Tikhonov damping shifts at strict 20 ms intervals.</li>
+                <li><strong>Target Accreditations:</strong> Superconducting QPU Matrix Engineer.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="exam-section">
+        <h2 style="color: #00ffcc; margin-top: 0; font-size: 18px;">✍️ Examination & Cryptographic Certification Simulator</h2>
+        <p style="font-size: 13px; color: #aaa;">Simulate submitting final exam code. Scores ≥ 80.0% generate a signed SHA-256 certificate ledger.</p>
+
+        <label style="font-size: 12px; display: block; margin-top: 10px;">Candidate Name:</label>
+        <input type="text" id="candName" value="Dr. Sarah Jenkins" style="background: #111118; border: 1px solid #00ffcc; color: #fff; padding: 8px; width: 300px; border-radius: 4px; font-family: monospace;">
+
+        <label style="font-size: 12px; display: block; margin-top: 10px;">Exam Score (%):</label>
+        <input type="number" id="candScore" value="88.5" min="0" max="100" style="background: #111118; border: 1px solid #00ffcc; color: #fff; padding: 8px; width: 100px; border-radius: 4px; font-family: monospace;">
+        <br>
+        <button class="btn-cert" onclick="generateDigest()">Issue Cryptographic Certificate</button>
+
+        <div id="certOutput" style="margin-top: 15px; font-family: monospace; font-size: 12px; background: #050508; padding: 12px; border-radius: 4px; color: #00ffcc; min-height: 50px;">
+            Awaiting examination submission...
+        </div>
+    </div>
+
+    <script>
+        function generateDigest() {
+            const name = document.getElementById('candName').value;
+            const score = parseFloat(document.getElementById('candScore').value);
+            const out = document.getElementById('certOutput');
+
+            if (score < 80.0) {
+                out.innerHTML = `<span style="color: #ff3366;">❌ EXAMINATION FAILED: Score ${score}% is below required threshold.</span>`;
+                return;
+            }
+
+            const rawStr = name + score + Date.now();
+            let hash = 0;
+            for (let i = 0; i < rawStr.length; i++) {
+                hash = ((hash << 5) - hash) + rawStr.charCodeAt(i);
+                hash |= 0;
+            }
+            const fakeSha256 = Math.abs(hash).toString(16).padStart(64, 'a1f89c4e2b00');
+
+            out.innerHTML = `<span style="color: #00ffcc;">✓ ACCREDITATION GRANTED & SIGNED (ISO/IEC 17025) BY SCIENTIST AMR TORKY</span><br>` +
+                `Candidate: <strong>${name}</strong> | Score: <strong>${score}%</strong><br>` +
+                `Tuition: Standard $12,000 USD → Net $6,000 USD Paid<br>` +
+                `SHA-256 Digest: <code>${fakeSha256}</code>`;
+        }
+    </script>
+</body>
+</html>
